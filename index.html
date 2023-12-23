@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <script type="text/javascript">
+        // Generate a random nonce value
+        function generateNonce() {
+            let charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let nonce = '';
+            for (let i = 0; i < 32; i++) {
+                nonce += charset.charAt(Math.floor(Math.random() * charset.length));
+            }
+            return nonce;
+        }
+
+        // Use the generated nonce value in your script tag
+        let nonceValue = generateNonce();
+    </script>
+  
   <title>Test facebook</title>
+  
 </head>
 
 <body> Test A
 
-  <script type="text/javascript" nonce="{place_your_nonce_value_here}" src="https://desk.zoho.com/portal/api/web/inapp/932239000000268051?orgId=840053533" defer></script>
+  <script type="text/javascript" nonce="{nonceValue}" src="https://desk.zoho.com/portal/api/web/inapp/932239000000268051?orgId=840053533" defer></script>
   
 <script type="text/javascript">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"siq7bedc7e847063ad5e0589d32996c6adf6f1dd911ce9952a426fc58b220460a1a", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");</script>
   
